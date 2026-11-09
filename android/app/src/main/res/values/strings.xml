@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HK Sky Invaders</string>
+    <string name="title_activity_main">HK Sky Invaders</string>
+    <string name="package_name">com.hkskyinvaders.game</string>
+    <string name="custom_url_scheme">com.hkskyinvaders.game</string>
+</resources>

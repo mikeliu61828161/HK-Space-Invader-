@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>HK Sky Invaders – Documentation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>HK Sky Invaders</h1>
+    <p>Space Invaders for Android, built with Phaser, Vite and Capacitor.</p>
+    <nav aria-label="Documentation">
+      <a href="#overview">Overview</a>
+      <a href="#stack">Tech stack</a>
+      <a href="#setup">Getting started</a>
+      <a href="#android">Android build</a>
+      <a href="#structure">Project structure</a>
+      <a href="#gameplay">Gameplay</a>
+    </nav>
+  </header>
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>HK Sky Invaders is a Space Invaders–style arcade game. It runs in the browser during development and is packaged as an Android app.</p>
+      <dl>
+        <dt>App name</dt><dd>HK Sky Invaders</dd>
+        <dt>App ID</dt><dd><code>com.hkskyinvaders.game</code></dd>
+        <dt>Version</dt><dd>1.0.0</dd>
+      </dl>
+    </section>
+
+    <section id="stack">
+      <h2>Tech stack</h2>
+      <table>
+        <thead><tr><th scope="col">Tool</th><th scope="col">Role</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Phaser 3</th><td>Game engine</td></tr>
+          <tr><th scope="row">Vite 5</th><td>Dev server and bundler (output to <code>dist/</code>)</td></tr>
+          <tr><th scope="row">Capacitor 6</th><td>Wraps the web build as a native Android app</td></tr>
+          <tr><th scope="row">TypeScript</th><td>Language tooling</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="setup">
+      <h2>Getting started</h2>
+      <pre><code>npm install
+npm run dev      # http://localhost:5173/
+npm run build    # production build into dist/
+npm run preview  # serve the production build</code></pre>
+    </section>
+
+    <section id="android">
+      <h2>Android build</h2>
+      <pre><code>npm run build
+npx cap add android   # first time only
+npx cap sync android
+npx cap open android  # opens Android Studio</code></pre>
+      <p>In Android Studio, wait for the Gradle sync, choose an emulator or a USB-debugging device, then press Run. After changing game code, rerun <code>npm run build &amp;&amp; npx cap sync android</code>.</p>
+    </section>
+
+    <section id="structure">
+      <h2>Project structure</h2>
+      <pre><code>hk_sky_invaders/
+├─ src/                  game source
+├─ assets/               game assets
+├─ public/               static files
+├─ dist/                 build output (git-ignored)
+├─ android/              Capacitor Android project
+├─ capacitor.config.ts   app ID, name, webDir
+├─ vite.config.js        base './', outDir dist
+└─ package.json</code></pre>
+    </section>
+
+    <section id="gameplay">
+      <h2>Gameplay</h2>
+      <p><em>To be completed.</em> Controls, enemies, scoring and levels are not documented yet, because I haven't read the game source. Add them here once confirmed.</p>
+    </section>
+  </main>
+  <footer><p>HK Sky Invaders documentation</p></footer>
+</body>
+</html>
